@@ -13,7 +13,7 @@ import { FormData } from '../../lib/types'
 export default function ProductDetail() {
 	const { id } = useParams()
 	const product = useAppSelector(state =>
-		state.products.find(p => p.id === Number(id))
+		state.products.find(p => String(p.id) === id)
 	)
 	const dispatch = useAppDispatch()
 	const [isEditing, setIsEditing] = useState(false)

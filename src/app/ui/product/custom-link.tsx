@@ -5,11 +5,13 @@ import { LinkHTMLAttributes, ReactNode } from 'react'
 type CustomLinkProps = {
 	children: ReactNode
 	variant?: 'primary' | 'secondary'
+	size?: 'small' | 'large'
 } & LinkHTMLAttributes<HTMLLinkElement>
 
 export default function CustomLink({
 	children,
 	href,
+	size = 'small',
 	variant = 'primary',
 }: CustomLinkProps) {
 	return (
@@ -22,6 +24,7 @@ export default function CustomLink({
 						variant === 'primary',
 					'border border-gray-400 rounded-lg text-gray-600 hover:bg-gray-100 ':
 						variant === 'secondary',
+					'text-xl px-10 py-4': size === 'large',
 				}
 			)}
 		>

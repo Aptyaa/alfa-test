@@ -11,7 +11,9 @@ export default function Home() {
 					<h3 className='text-l sm:text-2xl text-gray-700 mb-8'>
 						Здесь вы найдете самые разные вещи!!!
 					</h3>
-					<CustomLink href='/products'>Смотреть</CustomLink>
+					<CustomLink size='large' href='/products'>
+						Смотреть
+					</CustomLink>
 				</div>
 			</div>
 		</>
