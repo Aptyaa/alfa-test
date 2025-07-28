@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import CustomLink from './ui/product/custom-link'
 	declare global {
 		interface Window {
-			onTelegramAuth: (user: any) => void
+			onTelegramAuth: (user: User) => void
 		}
 	}
 
