@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import CustomLink from './ui/product/custom-link'
 	declare global {
 		interface Window {
@@ -7,11 +7,19 @@ import CustomLink from './ui/product/custom-link'
 		}
 	}
 
+interface User {
+	id: number
+	first_name: string
+	last_name?: string
+	username?: string
+	photo_url?: string
+}
+
 export default function Home() {
 	
-	const onTelegramAuth = (user:any) : void=> {
-    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-  }
+	const onTelegramAuth = (user: User): void => {
+		alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')')
+	}
 
 	useEffect(() => {
 		window.onTelegramAuth = onTelegramAuth
@@ -44,3 +52,4 @@ export default function Home() {
 		</>
 	)
 }
+
