@@ -1,6 +1,8 @@
 import CustomLink from './ui/product/custom-link'
 
-export default function Home() {
+export default async function Home() {
+	const response = await fetch("https://api.telegram.org/bot7605252858:AAFAaO2qnApQYmMkEFI7tMvWQJmySUrHn5M/getMe")
+	const data = await response.json()
 	return (
 		<>
 			<div className='bg-white flex mx-2 items-center justify-center min-h-120 rounded-xl shadow-2xl p-8 max-w-2xl w-full text-center'>
@@ -8,6 +10,7 @@ export default function Home() {
 					<h1 className='text-2xl sm:text-5xl font-bold text-gray-900 mb-4'>
 						Добро пожаловать на барахолку!
 					</h1>
+					<div>{JSON.stringify(data)}</div>
 					<h3 className='text-l sm:text-2xl text-gray-700 mb-8'>
 						Здесь вы найдете самые разные вещи!!!
 					</h3>
