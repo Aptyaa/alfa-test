@@ -30,7 +30,7 @@ export default function Home() {
 		script.setAttribute('data-telegram-login', 'aDatingService_bot')
 		script.setAttribute('data-size', 'large')
 		script.setAttribute('data-userpic', 'false')
-		script.setAttribute('data-onauth', 'onTelegramAuth(user)')
+		script.setAttribute('data-auth-url', 'https://alfa-test.netlify.app/products')
 		script.setAttribute('data-request-access', 'write')
 
 		document.body.appendChild(script)
@@ -52,4 +52,3 @@ export default function Home() {
 		</>
 	)
 }
-
